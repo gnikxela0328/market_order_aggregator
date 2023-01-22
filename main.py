@@ -11,7 +11,6 @@ Output csv files are stored in the book_predictor/data/output folder
 
 To see how the Aggregate Order Book is structured, refer to AOB.py
 """
-
 import os
 import sys
 from AOB import AOB
@@ -70,6 +69,5 @@ for x in f:
     
     # b side
     OrderBook.sum_b_side()
-
 
 OrderBook.create_csv(output_name=output_name)

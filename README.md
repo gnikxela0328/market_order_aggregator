@@ -1,7 +1,6 @@
-Aggregate Order Book + Price Predictor
+# Aggregate Order Book + Price Predictor
 
-Usage: 
-
+## Installation
 Create a virtual environment
 ```
 python3 -m venv .env
@@ -17,7 +16,7 @@ Install dependencies
 pip3 install -r requirements.txt
 ```
 
-Run Program
+## Usage
 Supply a CSV file to the main.py program. Output will be saved to the book_predictor/data/output folder
 
 ```
