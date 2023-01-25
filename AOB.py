@@ -29,7 +29,6 @@ Steps to update book:
     produce order book output
 """
 
-import heapq
 import pandas as pd
 
 class AOB():
@@ -79,7 +78,6 @@ class AOB():
         # holds all mappings between id and price -> id: price
         self.id_book = {}
 
-
     def add_entry(self, id, quantity, side, price):
         # store order in respective book
         if side == "a":
@@ -87,11 +85,13 @@ class AOB():
                 self.a_book[price].append((id, quantity))
             else:
                 self.a_book[price] = [(id, quantity)]
+
         else:
             if price in self.b_book:
                 self.b_book[price].append((id, quantity))
             else:
                 self.b_book[price] = [(id, quantity)]
+
 
         # map id to original price and quant point
         self.id_book[id] = (price, quantity)
@@ -110,6 +110,10 @@ class AOB():
             else:
                 self.a_book[price] = [(id, quantity)]
 
+            # if list is made empty, remove it from the book
+            if self.a_book[latest_entry[0]] == []:
+                del self.a_book[latest_entry[0]]
+
         else:
             # remove old entry
             self.b_book[latest_entry[0]].remove((id, latest_entry[1]))
@@ -120,6 +124,10 @@ class AOB():
             else:
                 self.b_book[price] = [(id, quantity)]
 
+            # if list is made empty, remove it from the book
+            if self.b_book[latest_entry[0]] == []:
+                del self.b_book[latest_entry[0]]
+
         # update id_book
         self.id_book[id] = (price, quantity)
 
@@ -129,15 +137,23 @@ class AOB():
             # remove old entry
             self.a_book[price].remove((id, quantity))
 
+            # if list is made empty, remove it from the book
+            if self.a_book[price] == []:
+                del self.a_book[price]
+
         else:
             # remove old entry
             self.b_book[price].remove((id, quantity))
+
+            # if list is made empty, remove it from the book
+            if self.b_book[price] == []:
+                del self.b_book[price]
 
         # update id_book
         del self.id_book[id]
 
     def sum_a_side(self):
-        top_prices = heapq.nsmallest(5, self.a_book, key=self.a_book.get)
+        top_prices = sorted(self.a_book.keys())[:5]
         a_figures = []
 
         # sum quantities for each price
@@ -184,7 +200,7 @@ class AOB():
             self.aq4.append(0)
 
     def sum_b_side(self):
-        top_prices = heapq.nlargest(5, self.b_book, key=self.b_book.get)
+        top_prices = sorted(self.b_book.keys(), reverse=True)[:5]
         b_figures = []
 
         # sum quantities for each price

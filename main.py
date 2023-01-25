@@ -37,14 +37,13 @@ for x in f:
     side = line[1]
     action = line[2]
     id = line[3]
-    price = line[4]
+    price = int(line[4])
     quantity = line[5].strip()
 
     # record timestamp, price, and side of each entry line
     OrderBook.timestamps.append(timestamp)
     OrderBook.prices.append(price)
     OrderBook.sides.append(side)
-
 
     ### determine action
 

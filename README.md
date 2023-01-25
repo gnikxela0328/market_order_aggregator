@@ -22,3 +22,21 @@ Supply a CSV file to the main.py program. Output will be saved to the book_predi
 ```
 python3 main.py [INPUT FILE.csv]
 ```
+
+<hr />
+
+# Modelling
+
+## Predictive Features
+- Going rate
+- Bid/Ask Spread
+- Volume Weighted Average Price
+- Orderbook Imbalance
+- Volume
+
+## Target (Determined by going rate)
+- Bearish
+- Bullish
+
+
+F = [time_n, going rate_n, spread_n, vwap_n, imbalance_n, volume_n, bearish/bullish]
