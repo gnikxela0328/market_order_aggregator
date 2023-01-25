@@ -13,7 +13,7 @@ To see how the Aggregate Order Book is structured, refer to AOB.py
 """
 import os
 import sys
-from AOB import AOB
+from processing.AOB import AOB
 
 ROOT_DIR = os.path.realpath(os.path.dirname(__file__))
 
