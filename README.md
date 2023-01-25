@@ -57,4 +57,10 @@ volume : Volume of shares for all order depths<br />
 target : Does the current going price increase or decrease at the next timestamp?<br />
 
 
+#### References
+- [Investigating Limit Order Book Characteristics for Short Term Price Prediction: a Machine Learning Approach](https://deliverypdf.ssrn.com/delivery.php?ID=379066111124123007021017094116093070033020028081008086064087120091099074030094115093126032033060045039030116126086030097066018111006059059074126025092072069031097093000035015103096005114074075101092070007020124075124115105020100095021014099117067064082&EXT=pdf&INDEX=TRUE)
+
+- [Forecasting Quoted Depth With the Limit Order Book](https://www.frontiersin.org/articles/10.3389/frai.2021.667780/full)
+
+
 
