@@ -34,7 +34,7 @@ python3 market_order_aggregator/processing/main.py [INPUT FILE.csv]
 - Orderbook Imbalance
 - Volume
 
-## Target (Determined by going rate)
+## Target (Determined by going rate of next timestamp)
 - Bearish
 - Bullish
 
