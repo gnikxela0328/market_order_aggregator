@@ -47,14 +47,14 @@ Models can be found in market_order_aggregator/modeling
 F = [timestamp,	going_rate,	b/a_spread,	ask_vol_weight_avg_price, bid_vol_weight_avg_price, order_imbalance, volume, target]
 ```
 
-timestamp : Corresponds with agg orderbook entries
-going_rate : Calculated by taking the midpoint between the best ask and bid prices
-b/a_spread : Calculated by taking the difference between the best ask and bid prices
-ask_vol_weight_avg_price : Weighted average of ask prices for all order depths
-bid_vol_weight_avg_price : Weighted average of bid prices for all order depths
-order_imbalance : Denotes imbalance between number of orderbook entries
+timestamp : Corresponds with agg orderbook entries <br />
+going_rate : Calculated by taking the midpoint between the best ask and bid prices<br />
+b/a_spread : Calculated by taking the difference between the best ask and bid prices<br />
+ask_vol_weight_avg_price : Weighted average of ask prices for all order depths<br />
+bid_vol_weight_avg_price : Weighted average of bid prices for all order depths<br />
+order_imbalance : Denotes imbalance between number of orderbook entries<br />
 volume : Volume of shares for all order depths
-target : Does the current going price increase or decrease at the next timestamp?
+target : Does the current going price increase or decrease at the next timestamp?<br />
 
 
 
