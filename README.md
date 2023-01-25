@@ -41,7 +41,11 @@ python3 market_order_aggregator/processing/main.py [INPUT FILE.csv]
 
 ### Model One feature vector
 
+Models can be found in market_order_aggregator/modeling
+
+```
 F = [timestamp,	going_rate,	b/a_spread,	ask_vol_weight_avg_price 	bid_vol_weight_avg_price, order_imbalance, volume, target]
+```
 
 timestamp : Corresponds with agg orderbook entries
 going_rate : Calculated by taking the midpoint between the best ask and bid prices
