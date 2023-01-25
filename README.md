@@ -53,7 +53,7 @@ b/a_spread : Calculated by taking the difference between the best ask and bid pr
 ask_vol_weight_avg_price : Weighted average of ask prices for all order depths<br />
 bid_vol_weight_avg_price : Weighted average of bid prices for all order depths<br />
 order_imbalance : Denotes imbalance between number of orderbook entries<br />
-volume : Volume of shares for all order depths
+volume : Volume of shares for all order depths<br />
 target : Does the current going price increase or decrease at the next timestamp?<br />
 
 
